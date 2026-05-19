@@ -12,24 +12,30 @@
     <header> <!--Header für Überschrift-->
         <h1>Car showroom</h1>
         <div class="titleLine"></div> <!--Linie wird in CSS definiert-->
-    </header>
-
-    <main> <!--Unter main wird der Hauptteil definiert-->
-        <nav> <!--Navigation für zukünftige Seiten-->
+        <nav class="nav_pages"> <!--Navigation für weitere Seiten-->
             <ul>
                 <li><a href="#">Car selection</a></li>
                 <li><a href="#">Lap times</a></li>
                 <li><a href="#"></a></li>
             </ul>
         </nav>
-        <section> <!--Section für Autoauswahl-->
+    </header>
+
+    <main> <!--Unter main wird der Hauptteil definiert-->
+        <section class="car-Selection_Section"> <!--Section für Autoauswahl-->
             <h2>Car selection</h2>
             <div></div>
             <table class="car-Selection_Table"> <!--Autoauswahl als Tabelle-->
                 <tr>
-                    <td><button>View</button></td> <!--Wird zur jeweiligen Seite des Autos leiten-->
-                    <td><button>View</button></td>
-                    <td><button>View</button></td>
+                    <td><button onclick=""> <!--Wird zur jeweiligen Seite des Autos leiten-->
+                         View
+                    </button></td>
+                    <td><button onclick="window.location.href = 'JaguarXJ220.html'">
+                        View
+                    </button></td>
+                    <td><button onclick="">
+                        View
+                    </button></td>
                 </tr>
                 <tr>
                     <td>picture</td> <!--Platzhalter für kommende Bilder-->
@@ -39,60 +45,62 @@
                 <tr>
                     <th>RUF CTR "Yellowbird"</th> <!--th für Überschrift in Tabelle-->
                     <th>Jaguar XJ220</th>
-                    <th>Aston Martin V600 Le Mans</th>
+                    <th>Aston Martin Vantage V600 Le Mans</th>
                 </tr>
                 <tr>
                     <td>469hp - 552Nm</td> <!--td für normale Spalten-->
-                    <td>542hp - 644Nm</td>
+                    <td>549hp - 644Nm</td>
                     <td>600hp - 813Nm</td>
-                    <td>Power rating</td>
+                    <th>Power rating</th>
                 </tr>
                 <tr>
                     <td>3.6s</td>
-                    <td></td>
-                    <td></td>
-                    <td>0 to 100km/h</td>
+                    <td>3.6s</td>
+                    <td>3.9s</td>
+                    <th>0 to 100km/h</th>
                 </tr>
                 <tr>
                     <td>340km/h</td>
-                    <td></td>
-                    <td></td>
-                    <td>Top speed</td>
+                    <td>354km/h</td>
+                    <td>320km/h</td>
+                    <th>Top speed</th>
                 </tr>
                 <tr>
-                    <td>Boxer Six - 3.4L</td>
-                    <td></td>
-                    <td></td>
-                    <td>Engine</td>
+                    <td>Boxer 6 - 3.4L</td>
+                    <td>V6 - 3.5L</td>
+                    <td>V8 - 5.3L</td>
+                    <th>Engine</th>
                 </tr>
                 <tr>
                     <td>Twin turbo</td>
-                    <td></td>
-                    <td></td>
-                    <td>Induction</td>
+                    <td>Twin turbo</td>
+                    <td>Twin supercharger</td>
+                    <th>Induction</th>
                 </tr>
                 <tr>
                     <td>RWD - 6 speed</td>
-                    <td></td>
-                    <td></td>
-                    <td>Drivetrain</td>
+                    <td>RWD - 5 speed</td>
+                    <td>RWD - 6 speed</td>
+                    <th>Drivetrain</th>
                 </tr>
                 <tr>
                     <td>1150kg</td>
-                    <td></td>
-                    <td></td>
-                    <td>Weight</td>
+                    <td>1470kg</td>
+                    <td>2000kg</td>
+                    <th>Weight</th>
                 </tr>
-
             </table>
+        </section>
+        <section class="connection">
+            <h3>Connection</h3>
+            <p class="txt_Connection">text</p>
         </section>
     </main>
 
     <footer> <!--Footer für Impressum-->
-        <h3>Impressum</h3>
+        <h2>Impressum</h2>
         <div class="footerLine"></div>
         <p class="impressumText">Joel Petitjean</p>
     </footer>
 </body>
-
 </html>
