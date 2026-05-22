@@ -14,9 +14,8 @@
         <div class="titleLine"></div> <!--Linie wird in CSS definiert-->
         <nav class="nav_pages"> <!--Navigation für weitere Seiten-->
             <ul>
-                <li><a href="#">Car selection</a></li>
-                <li><a href="#">Lap times</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="car_showroom.html">Car selection</a></li>
+                <li><a href="lap_times.html">Lap times</a></li>
             </ul>
         </nav>
     </header>
@@ -24,66 +23,65 @@
     <main> <!--Unter main wird der Hauptteil definiert-->
         <section class="car-Selection_Section"> <!--Section für Autoauswahl-->
             <h2>Car selection</h2>
-            <div></div>
             <table class="car-Selection_Table"> <!--Autoauswahl als Tabelle-->
                 <tr>
-                    <td><button onclick=""> <!--Wird zur jeweiligen Seite des Autos leiten-->
+                    <td><button onclick="window.location.href = 'RUFCTR.html'"> <!--Wird zur jeweiligen Seite des Autos leiten-->
                          View
                     </button></td>
                     <td><button onclick="window.location.href = 'JaguarXJ220.html'">
                         View
                     </button></td>
-                    <td><button onclick="">
+                    <td><button onclick="window.location.href = 'AstonV600.html'">
                         View
                     </button></td>
                 </tr>
-                <tr>
+                <tr class="row_pictures">
                     <td>picture</td> <!--Platzhalter für kommende Bilder-->
                     <td>picture</td>
                     <td>picture</td>
                 </tr>
-                <tr>
+                <tr class="row_name">
                     <th>RUF CTR "Yellowbird"</th> <!--th für Überschrift in Tabelle-->
                     <th>Jaguar XJ220</th>
                     <th>Aston Martin Vantage V600 Le Mans</th>
                 </tr>
-                <tr>
+                <tr class="row_power">
                     <td>469hp - 552Nm</td> <!--td für normale Spalten-->
                     <td>549hp - 644Nm</td>
                     <td>600hp - 813Nm</td>
                     <th>Power rating</th>
                 </tr>
-                <tr>
+                <tr class="row_accel">
                     <td>3.6s</td>
                     <td>3.6s</td>
                     <td>3.9s</td>
                     <th>0 to 100km/h</th>
                 </tr>
-                <tr>
+                <tr class="row_speed">
                     <td>340km/h</td>
                     <td>354km/h</td>
                     <td>320km/h</td>
                     <th>Top speed</th>
                 </tr>
-                <tr>
+                <tr class="row_engine">
                     <td>Boxer 6 - 3.4L</td>
                     <td>V6 - 3.5L</td>
                     <td>V8 - 5.3L</td>
                     <th>Engine</th>
                 </tr>
-                <tr>
+                <tr class="row_induction">
                     <td>Twin turbo</td>
                     <td>Twin turbo</td>
                     <td>Twin supercharger</td>
                     <th>Induction</th>
                 </tr>
-                <tr>
+                <tr class="row_drivetrain">
                     <td>RWD - 6 speed</td>
                     <td>RWD - 5 speed</td>
                     <td>RWD - 6 speed</td>
                     <th>Drivetrain</th>
                 </tr>
-                <tr>
+                <tr class="row_weight">
                     <td>1150kg</td>
                     <td>1470kg</td>
                     <td>2000kg</td>
