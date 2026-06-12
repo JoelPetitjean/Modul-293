@@ -1,11 +1,180 @@
-.titleLine
+:root /*Hier werden die css Variablen definiert*/
 {
-    width: 100%;
-    border-top: 2px solid black;
+    --size-normal: 18px;
+    --size-larger: 20px;
+    --color-accent: darkslategray;
+    --color-hover: teal;
+}
+* /*Für alle elemente*/
+{
+    box-sizing: border-box; /*Damit bei der Grösse nicht Padding dazu gerechnet wird*/
+    font-family: Arial, Helvetica, sans-serif; /*Font die von allen Elementen übernommen wird*/
+    padding: 0; /*Um default padding von allen Elementen zu entfernen*/
+}
+.line /*Klassenselektor*/
+{
+    width: 100%; /*Um den ganzen Bildschirm auszufüllen*/
+    border-top: 2px solid black; /*Durchgehende Linie*/
+}
+.picture_Structural
+{
+    width: 450px;
+    height: auto;
+    margin-top: 1vw;
+}
+h1
+{
+    font-size: 50px;
+    margin-top: 1vw;
+    text-align: center; /*Schiebt den Text in die Mitte*/
+}
+h2
+{
+    font-size: 30px;
+    margin-top: 1vw;
+    text-align: center;
+}
+p /*Elementselektor*/
+{
+    font-size: var(--size-normal); /*Oben definierte Variable*/
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    text-align: center;
+}
+a 
+{
+    font-size: 14px;
+    color: var(--color-accent); /*Wie die Variable genutzt wird*/
+}
+a:hover /*Pseudoselektor(Wenn Mauszeiger über a hovert)*/
+{
+    color: var(--color-hover);
+}
+ul
+{
+    display: flex; /*Macht die Liste horizontal*/
+    justify-content: space-around; /*Damit die Liste Den ganzen Bildschirm abdeckt*/
+    list-style: none; /*Entfernt bullet points*/
+    margin-top: 1vw;
+    
+}
+header
+{
+    position: sticky; /*Damit der Header immer im Fenster bleibt*/
+    margin-top: 5px;
+    top: 0; /*Oberste Position*/
+    height: 150px; /*Höhe des Headers*/
+    background-color: white;
+}
+nav a /*Kombinierselektor(Alle a innerhalb nav)*/
+{
+    font-size: var(--size-larger);
+}
+.introduction
+{
+    .line
+    {
+        margin-top: 2vw;
+    }
+}
+.txt_Introduction
+{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.pictures_outside
+{
+    display: flex; /*Aktiviert flexbox für bessere positionierung*/
+    flex-wrap: wrap; /*Erlaubt, dass Elemente bei Platzmangel untereinander stehen dürfen*/
+    justify-content: center; /*Bilder zentrieren*/
+    gap: 10px; /*Abstand zwischen Elementen*/
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: auto;
+}
+.technical_Information
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+/*Wird erst angewendet, wenn bedingung zutrifft*/
+@media (max-width: 1200px) /*Wenn die Bildschirmbreite weniger als 600px beträgt*/
+{
+    .technical_Information
+    {
+        flex-direction: column; /*Elemente werden vertikal angezeigt*/
+    }        
+}
+.picture_Technical
+{
+    float: left;
+}
+.txt_Technical
+{
+    margin-left: 2vw;
+    margin-left: 2vw;
+}
+.interior_Information
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+@media (max-width: 1200px) /*Wenn die Bildschirmbreite weniger als 600px beträgt*/
+{
+    .interior_Information
+    {
+        flex-direction: column; /*Elemente werden vertikal angezeigt*/
+    }        
+}
+.picture_Interior
+{
+    float: right;
+}
+.history_Information
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+@media (max-width: 1200px) /*Wenn die Bildschirmbreite weniger als 600px beträgt*/
+{
+    .history_Information
+    {
+        flex-direction: column; /*Elemente werden vertikal angezeigt*/
+    }        
+}
+.picture_History
+{
+    float: left;
+}
+footer
+{
+    .contactData /*Nesting(Nur contactData innerhalb footer*/
+    {
+        font-size: (var(--size-normal));
+        a /*Nur a innerhalb contactData(Nesting unendlich erweiterbar)*/
+        {
+           font-size: 17px; /*Überschreibt die andere Fontgrösse(Höhere Spezifität)*/
+        }
+    }
+}
+.video
+{
+    margin-top: 2vw;
+    text-align: center;
 }
 
-.footerLine
-{
-    width: 100%;
-    border-top: 2px solid black;
-}
+
+

@@ -4,14 +4,78 @@
 <head> <!--Für nicht sichtbare Elemente(Metadaten)-->
     <meta charset="UTF-8"> <!--Gibt kodierung an(Wichtig für Sonderzeichen)-->
     <meta name="author" content="Joel Petitjean">
+    <meta name="description"
+        content="Diese Webseite ist ein Digitaler Showroom oder Museum für gleichgesinnte Autofanatiker.">
     <link rel="stylesheet" href="../css/main_showroom.css"> <!--Pfad zu css-->
     <title>Car showroom</title> <!--Titel der Webseite, mit der sie im Browser angezeigt wird-->
 </head>
 
 <body>
+    <section>
+        <!--Welche methode und wohin de Daten gesendet werden-->
+        <form method="post" action="https://gibm.becknet.ch/formular/formular.php"> <!--Formular-->
+            <fieldset> <!--Abschnitt von Formular-->
+                <legend>Account (Required)</legend> <!--Titel des Abschnitts-->
+                <label>Account name</label> <!--Standardmässiger tet-->
+                <!--Mit autocomplete wird automatisch der Username bei anderen Seiten vorgeschlagen-->
+                <input type="text" id="accountName" name="accountName"  required autofocus autocomplete="username"><br> <!--Textbox-->
+                <label for="password">Password (Requires letters and numbers)</label>
+                <!--Typ password um zeichen verdeckt darzustellen-->
+                <!--Inhalt der Textbox muss minlenght und required erfüllen(Clientseitige Validatoren)-->
+                <input type="password" id="password" name="password" required minlength="8" autocomplete="current-password" 
+                pattern="(?=.*[A-Za-z])(?=.*\d).+"> <!--Muss dem Regulärem Ausdruck zutreffen--> <!--Regulärer Ausdruck von KI-->
+            </fieldset>
+            <fieldset>
+                <legend>Personal information (optional)</legend>
+                <div class="form_Gender">
+                    <label for="male">Male</label>
+                    <!--value beschreibt den Wert, der dieser eine Radiobutton enthält-->
+                    <!--Drei mögliche Werte unter dem gleichen Namen-->
+                    <input type="radio" id="male" value="male" name="gender"> <br> <!--Maximal ein Wert auswählbar-->
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" value="female" name="gender"><br>
+                    <label for="individual">Individual</label>
+                    <input type="radio" id="individual" value="individual" name="gender"><br>
+                </div>
+                <!--Mit for wird automatisch die firstname textbox fokussiert, falls das Label geklickt wird-->
+                <label for="firstName">Name</label>
+                <!--Überschreibbarer Platzhalter in Textbox-->
+                <!--Maximale länge von 25(Wichtig für Datenbank)-->
+                <input type="text" id="firstName" name="firstName" placeholder="First name" maxlength="25" autocomplete=""><br>
+                <label for="familyName">Family Name</label>
+                <input type="text" id="familyName" name="familyName" placeholder="Family name" maxlength="25"><br>
+                <label>Age</label>
+                <input type="date" id="age" name="age"> <!--Erzeugt Auswahl für Datum-->
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <div class="form_Factor">
+                    <label for="factor">What performance factor do you value most in a car?</label>
+                    <select id="factor" name="factor"> <!--Dropdown-->
+                        <option value="speed">Speed</option> <!--Auswählbare Werte-->
+                        <option value="handling">Handling</option>
+                        <option value="comfort">Comfort</option>
+                    </select>
+                </div>
+                <div class="form_Interest">
+                    <label>What do you find interesting about a car?</label><br>
+                    <label>Facts</label>
+                    <!--Alle Werte können ausgewählt werden-->
+                    <input type="checkbox" id="facts" name="facts" value="facts"><br> <!--Checkbox-->
+                    <label>Driving</label>
+                    <input type="checkbox" id="driving" name="driving" value="driving"><br>
+                    <label>History</label>
+                    <input type="checkbox" id="history" name="history" value="history"><br>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button> <!--Sendet die eingegebenen Werte an den Server-->
+            <button type="reset">Cancel</button> <!--Bricht das Formular ab und setzt alle Felder zurück-->
+        </form>
+    </section>
+
     <header> <!--Header für Überschrift-->
         <h1>Car showroom</h1>
-        <div class="titleLine"></div> <!--Linie wird in CSS definiert-->
+        <div class="line"></div> <!--Linie wird in CSS definiert-->
         <nav class="nav_pages"> <!--Navigation für weitere Seiten-->
             <ul>
                 <li><a href="car_showroom.html">Car selection</a></li>
@@ -25,15 +89,10 @@
             <h2>Car selection</h2>
             <table class="car-Selection_Table"> <!--Autoauswahl als Tabelle-->
                 <tr>
-                    <td><button onclick="window.location.href = 'RUFCTR.html'"> <!--Wird zur jeweiligen Seite des Autos leiten-->
-                         View
-                    </button></td>
-                    <td><button onclick="window.location.href = 'JaguarXJ220.html'">
-                        View
-                    </button></td>
-                    <td><button onclick="window.location.href = 'AstonV600.html'">
-                        View
-                    </button></td>
+                    <td><button onclick="window.location.href = 'RUFCTR.html'">View</button></td>
+                    <!--Wird zur jeweiligen Seite des Autos leiten-->
+                    <td><button onclick="window.location.href = 'JaguarXJ220.html'">View </button></td>
+                    <td><button onclick="window.location.href = 'AstonV600.html'">View </button></td>
                 </tr>
                 <tr class="row_pictures">
                     <td>picture</td> <!--Platzhalter für kommende Bilder-->
@@ -89,16 +148,16 @@
                 </tr>
             </table>
         </section>
-        <section class="connection">
-            <h3>Connection</h3>
-            <p class="txt_Connection">text</p>
-        </section>
     </main>
 
     <footer> <!--Footer für Impressum-->
         <h2>Impressum</h2>
-        <div class="footerLine"></div>
+        <div class="line"></div>
         <p class="impressumText">Joel Petitjean</p>
+        <p class="contactData">E-Mail: <a href="mailTo:joel.petitjean@bbzbl-it.ch">joel.petitjean@bbzbl-it.ch</a>
+            <br> Telephone: <a href="tel:"></a>
+        </p>
     </footer>
 </body>
+
 </html>

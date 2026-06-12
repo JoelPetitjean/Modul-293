@@ -4,6 +4,7 @@
 <head> <!--Für nicht sichtbare Elemente(Metadaten)-->
     <meta charset="UTF-8"> <!--Gibt kodierung an(Wichtig für Sonderzeichen)-->
     <meta name="author" content="Joel Petitjean">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">--> <!--Link zu Bootstrap-->
     <link rel="stylesheet" href="../css/individual_cars.css"> <!--Pfad zu css-->
     <title>Jaguar XJ220</title> <!--Titel der Webseite, mit der sie im Browser angezeigt wird-->
 </head>
@@ -11,56 +12,110 @@
 <body>
     <header>
         <h1>Jaguar XJ220</h1>
-        <div class="titleLine"></div> <!--Linie wird in CSS definiert-->
+        <div class="line"></div> <!--Linie wird in CSS definiert-->
         <nav> <!--Navigation für weitere Seiten-->
             <ul>
-                <li><a href="car_showroom.html">Car selection</a></li>
-                <li><a href="lap_times.html">Lap times</a></li>
+                <!--Mit targer="_blank" wird die verlinkte Website in einem neuen Tab geöffnet-->
+                <li><a href="car_showroom.html" target="_blank">Car selection</a></li>
+                <li><a href="lap_times.html" target="_blank">Lap times</a></li>
+                <li><a href="RUFCTR.html" target="_blank">RUF CTR "Yellowbird"</a></li>
+                <li><a href="AstonV600.html" target="_blank">Aston Martin V600 Le Mans</a></li>
             </ul>
         </nav>
+        <div class="line"></div>
     </header>
 
     <main>
         <section class="introduction">
             <h2>Introduction</h2>
-            <p class="txt_Introduction">As the saying goes, if you have to ask the price, you can't afford it. Well, we still have to ask. Any discussion of the Jaguar XJ220 must be prefaced with a price. At £415,000 ($705,500), It is the world's most expensive production car (among those actually being delivered to buyers). The XJ220 is also the world's fastest production car. Back in May 1991, it hit 212 mph at Ford's Fort Stockton proving ground in Texas. Earlier this year, it turned 217 mph at Nardo in Italy.</p>
-            <!--Link: https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/-->
-            <img class="picture_External1" src="" alt="">
-            <img class="picture_External2" src="" alt="">
-            <img class="picture_External3" src="" alt="">
+            <p class="txt_Introduction">As the saying goes, if you have to ask the price, you can't afford it. Well, we still have to ask. Any discussion of the Jaguar XJ220 must be prefaced with a price. At £415,000 ($705,500), It is the world's most expensive production car (among those actually being delivered to buyers). The XJ220 is also the world's fastest production car. Back in May 1991, it hit 212 mph at Ford's Fort Stockton proving ground in Texas. Earlier this year, it turned 217 mph at Nardo in Italy. 
+                <a href="https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/" target="_blank" rel="noreferrer" >Text from Car and Driver</a></p>
+            <!--<a></a> Verlinkt auf andere Website. rel sorgt hier dafür das die verlinkte Website nicht weiss woher der Benutzer kommt-->
+            <figure class="pictures_outside">
+                <!--Verlinkt auf jpg(Lokal)-->
+                <img class="picture_Structural" src="../resources/images/JaguarXJ220/XJ220_front.jpg" alt="Jaguar XJ220 front">
+
+                <!--Alt ist der Text der angezeigt wird, falls das Bild nicht geladen werden kann-->
+                <img class="picture_Structural" src="../resources/images/JaguarXJ220/XJ220_side.jpg" alt="Jaguar XJ220 side">
+
+                <!--Verlinkt direkt zum Link des Bildes-->
+                <img class="picture_Structural" src="https://www.secret-classics.com/wp-content/uploads/2020/09/jaguarxj220girardo-05.jpg" alt="Jaguar XJ220 rear">
+                <!--<p class="txt_PictureSource">https://www.secret-classics.com/jaguar-xj220/</p>-->
+            </figure>
+            <div class="line"></div>
         </section>
         <section class="technical">
-            <h2>Technical information</h2>
-            <div>
-                <img class="picture_Engine" src="" alt="">
-                <p class="txt_Technical">The five-speed transaxle is specially made by four-wheel-drive specialists FF Developments and includes a viscous coupling as a limited-slip device. The clutch is heavy, and the gearshift demands firm, positive movement. The same applies to the brakes: massive Group C cross-drilled discs with four-pot calipers without power assistance. There is no power for the steering either, though at anything faster than walking pace most drivers would not feel the need for assistance. The XJ220's handling response is as accurate as a well-prepared race car's. It's beautifully balanced, with just a little understeer for those too timid to get the power on early through a corner. Those huge rear tires, specially developed by Bridgestone for the XJ220, really do their business.</p>
-                <!--Link: https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/-->
+            <div class="technical_Information">
+                <!--Erlaubt für Angabe von verschiedenen Formaten für das Gleiche Bild-->
+                <figure class="picture_Technical"> <!--Um bild und Quelle in eins zu Verpacken-->
+                    <picture>
+                        <!--Erste option-->
+                        <source class="picture_Structural" srcset="../resources/images/JaguarXJ220/XJ220_engine.webp" type="image/webp">
+                        <!--Weitere optionen, falls das erste Format nicht unterstütz wird-->
+                        <img class="picture_Structural" src="../resources/images/JaguarXJ220/XJ220_engine.jpg" alt="Jaguar XJ220 front">
+                    </picture>
+                    <p class="txt_PictureSource"><a>https://www.gq-magazine.co.uk/article/jaguar-xj220</a></p>
+                </figure>
+                <div>
+                    <h2>Technical information</h2>
+                    <p class="txt_Technical">The five-speed transaxle is specially made by four-wheel-drive specialists FF Developments and includes a viscous coupling as a limited-slip device. The clutch is heavy, and the gearshift demands firm, positive movement. The same applies to the brakes: massive Group C cross-drilled discs with four-pot calipers without power assistance. There is no power for the steering either, though at anything faster than walking pace most drivers would not feel the need for assistance. The XJ220's handling response is as accurate as a well-prepared race car's. It's beautifully balanced, with just a little understeer for those too timid to get the power on early through a corner. Those huge rear tires, specially developed by Bridgestone for the XJ220, really do their business.
+                        <a href="https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/" target="_blank" rel="noreferrer">Text from Car and Driver</a>
+                    </p>
+                </div>
             </div>
-            <audio class="sound_Engine" controls>
-                <source src="" type="">
-            </audio>
+            <div class="line"></div>
         </section>
-        <section class="interior">
-            <h2>Interior</h2>
-            <div>
-                <p class="txt_Interior">As I swung myself into chassis 004 (one of Jaguar’s early prototypes) and shut the long door, I became instantly cocooned in the cabin, in a deceivingly low driving position with a steeply raked panoramic windscreen to see out of. However, despite this encapsulation, the cabin proved to be more than roomy enough with plenty of shoulder space, a deep footwell to fit the full height of those who might ordinarily struggle to squeeze into cars like these, and to literally top it off, a glass roof bringing in lots of light.</p>
-                <!--https://petrolicious.com/blogs/articles/what-its-like-to-drive-the-infamous-jaguar-xj220-->
-                <img class="picture_Interior" src="" alt="">
+        <section class="interior"> <!--Section für Interieur-->
+            <div class="interior_Information"> <!--Division, um Text und Bild unter einem zusammenzufassen-->
+                <div>
+                    <h2>Interior</h2>
+                    <!--p für standardmässigen Text-->
+                    <p class="txt_Interior">As I swung myself into chassis 004 (one of Jaguar's early prototypes) and shut the long door, I became instantly cocooned in the cabin, in a deceivingly low driving position with a steeply raked panoramic windscreen to see out of. However, despite this encapsulation, the cabin proved to be more than roomy enough with plenty of shoulder space, a deep footwell to fit the full height of those who might ordinarily struggle to squeeze into cars like these, and to literally top it off, a glass roof bringing in lots of light.
+                        <a href="https://petrolicious.com/blogs/articles/what-its-like-to-drive-the-infamous-jaguar-xj220" target="_blank" rel="noreferrer" >Text from Petrolicious</a>
+                    </p>
+                </div>
+                <figure class="picture_Interior">
+                    <picture>
+                        <img class="picture_Structural" src="../resources/images/JaguarXJ220/XJ220_interior.jpg" alt="Jaguar XJ220 interior"> 
+                        <source srcset="https://www.motorauthority.com/news/1133067_1995-jaguar-xj220-headed-to-auction-1-of-4-painted-daytona-black">
+                    </picture>
+                    <p class="txt_PictureSource"><a>https://www.motorauthority.com/news/1133067_1995-jaguar-xj220-headed-to-auction-1-of-4-painted-daytona-black</a></p>
+                </figure>
             </div>
+            <div class="line"></div>
         </section>
         <section class="history">
-            <h2>History</h2>
-            <div>
-                <img class="picture_History" src="" alt="">
-                <p class="txt_History">The mid-engined, V-12–powered concept car that became the XJ220 made Jaguar the toast of the 1988 Birmingham motor show. It generated enough interest for Jaguar to ask its affiliate company JaguarSport to engineer it for limited production. In December 1989, Jaguar­Sport announced it would build the XJ220, but in a less potent form, with a 3.5-liter twin-turbocharged V-6 engine driving the rear wheels. No more than 350 would be delivered to selected buyers who plunked down an $80,000 deposit against a £290,000 ($484,000) price tag.</p>
-                <!--Link: https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/-->
+            <div class="history_Information">
+                <figure class="picture_History">
+                    <picture>
+                        <img class="picture_Structural" src="../resources/images/JaguarXJ220/XJ220_prototype.jpg" alt="Jaguar XJ220 concept">
+                    </picture>
+                    <p class="txt_PictureSource"><a>https://www.vitadistile.com/2014/11/24/twr-non-tvr/jaguar-xj220-prototype/</a></p>
+                </figure>
+                <div>
+                    <h2>History</h2>
+                    <p class="txt_History">The mid-engined, V-12-powered concept car that became the XJ220 made Jaguar the toast of the 1988 Birmingham motor show. It generated enough interest for Jaguar to ask its affiliate company JaguarSport to engineer it for limited production. In December 1989, Jaguar­Sport announced it would build the XJ220, but in a less potent form, with a 3.5-liter twin-turbocharged V-6 engine driving the rear wheels. No more than 350 would be delivered to selected buyers who plunked down an $80,000 deposit against a £290,000 ($484,000) price tag.
+                        <a href="https://www.caranddriver.com/reviews/a62243625/1993-jaguar-xj220-archive-drive/" target="_blank" rel="noreferrer" >Text from Car and Driver</a>
+                    </p>
+                </div>
             </div>
+            <div class="line"></div>
+        </section>
+        <section class="video">
+            <!--iframe für Youtube Video-->
+            <!--Optionen kopiert von Youtube-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o7ZPeF6faG8?si=HjUH_V6jHnI3u9QL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </main>
 
     <footer>
         <h2>Impressum</h2>
-        <div class="footerLine"></div>
+        <div class="line"></div>
         <p class="impressumText">Joel Petitjean</p>
+        <!--Eine E-Mail wird mit href="mailTo: verlinkt, eine Telefonnummer mit href="tel:"-->
+        <!--Beim klicken des Links wird der Default Service(z.B. Outlook für Mail) mit der korrekten Adresse geöffnet-->
+        <p class="contactData">E-Mail: <a href="mailTo:joel.petitjean@bbzbl-it.ch">joel.petitjean@bbzbl-it.ch
+        </a> <br> Telephone: <a href="tel:000">000</a>
+        </p>
     </footer>
 </body>
