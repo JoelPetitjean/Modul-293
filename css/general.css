@@ -1,0 +1,104 @@
+:root /*Hier werden die css Variablen definiert*/
+{
+    --size-normal: 18px;
+    --size-larger: 20px;
+    --color-accent: darkslategray;
+    --color-hover: teal;
+}
+* /*Für alle elemente*/
+{
+    box-sizing: border-box; /*Damit bei der Grösse nicht Padding dazu gerechnet wird*/
+    /*display: grid;*/
+    font-family: Arial, Helvetica, sans-serif; /*Font die von allen Elementen übernommen wird*/
+    padding: 0; /*Um default padding von allen Elementen zu entfernen*/
+}
+body
+{
+    max-width: 1500px; /*Maximale Breite(Inhalt der Website wird diese Breite nicht überschreiten)*/
+    margin: 0 auto; /*Zentriert Inhalt*/
+}
+.line /*Klassenselektor*/
+{
+    width: 100%; /*Um den ganzen Bildschirm auszufüllen*/
+    border-top: 2px solid black; /*Durchgehende Linie*/
+}
+.picture_Structural
+{
+    width: 450px;
+    height: auto;
+    margin-top: 1vw;
+}
+h1
+{
+    font-size: 50px;
+    margin-top: 1vw;
+    text-align: center; /*Schiebt den Text in die Mitte*/
+    @media (max-width: 800px) /*Wenn die Bildschirmbreite weniger als 600px beträgt*/
+    {
+        h1
+        {
+            font-size: 10px;
+        }
+    }
+}
+h2
+{
+    font-size: 30px;
+    margin-top: 1vw;
+    text-align: center;
+}
+p /*Elementselektor*/
+{
+    font-size: var(--size-normal); /*Oben definierte Variable*/
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    text-align: center;
+}
+a
+{
+    font-size: 14px;
+    color: var(--color-accent); /*Wie die Variable genutzt wird*/
+}
+a:hover /*Pseudoselektor(Wenn Mauszeiger über a hovert)*/
+{
+    color: var(--color-hover);
+}
+
+/*##LAYOUT##*/
+header
+{
+    position: sticky; /*Damit der Header immer im Fenster bleibt*/
+    margin-top: 5px;
+    top: 0; /*Oberste Position*/
+    height: 150px; /*Höhe des Headers*/
+    background-color: white;
+}
+ul
+{
+    display: flex; /*Macht die Liste horizontal*/
+    justify-content: space-around; /*Damit die Liste Den ganzen Bildschirm gleichmässig abdeckt*/
+    list-style: none; /*Entfernt bullet points*/
+    @media (max-width: 900px)
+    {
+        .li_recomCar /*Zwei Elemente der Navigation*/
+        {
+            display: none; /*Enfernt HTML Element*/
+        }
+    }
+}
+nav a /*Kombinierselektor(Alle a innerhalb nav)*/
+{
+    font-size: var(--size-larger);
+}
+footer
+{
+    .contactData /*Nesting(Nur contactData innerhalb footer*/
+    {
+        font-size: (var(--size-normal));
+        a /*Nur a innerhalb contactData(Nesting unendlich erweiterbar)*/
+        {
+           font-size: 17px; /*Überschreibt die andere Fontgrösse(Höhere Spezifität)*/
+        }
+    }
+}

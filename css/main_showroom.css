@@ -1,7 +1,38 @@
 
-.line
+
+
+/*##LAYOUT##*/
+body
 {
-    width: 100%;
-    border-top: 2px solid black;
+    display: grid; /*Aktiviert CSS Grid*/
+    grid-template-areas: /*Welche Grid-Area wie viele Spalten hat*/
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    /*Fractions für gleichmässige Fraktion des Bilschirms*/
+    grid-template-columns: 1fr 1fr 1fr; /*Wie viele Spalten und welche breite sie haben*/
+}
+header
+{
+    grid-area: header; /*Welcher Grid-Area das Element angehört*/
+    height: 165px;
+}
+.form
+{
+    margin-top: 180px;
+    grid-area: header;
+}
+main
+{
+    grid-area: main;
+}
+.car-Selection_Section
+{
+    justify-content: center;
+    align-items: center;
+}
+footer
+{
+    grid-area: footer;
 }
 
