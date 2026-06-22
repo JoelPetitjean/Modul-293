@@ -1,4 +1,17 @@
-
+button
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 17px;
+    color: darkslategray;
+    background-color: transparent;
+}
+button:hover /*Pseudoselektor(Wenn Mauszeiger über a hovert)*/
+{
+    color: var(--color-hover);
+}
 
 
 /*##LAYOUT##*/
@@ -10,7 +23,8 @@ body
         "main main main"
         "footer footer footer";
     /*Fractions für gleichmässige Fraktion des Bilschirms*/
-    grid-template-columns: 1fr 1fr 1fr; /*Wie viele Spalten und welche breite sie haben*/
+    grid-template-columns: 1fr 1fr 1fr; /*Breite der Spalten*/
+    grid-template-rows: 520px 350px 100px; /*Höhe der Spalten*/
 }
 header
 {
@@ -19,17 +33,24 @@ header
 }
 .form
 {
+    grid-area: header; /*Es können auch mehrere Elemente der gleichen Grid-Area angehören*/
     margin-top: 180px;
-    grid-area: header;
 }
 main
 {
     grid-area: main;
 }
-.car-Selection_Section
+.car-Selection_Table
 {
-    justify-content: center;
-    align-items: center;
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.car-Selection_Table th, .car-Selection_Table td
+{
+    text-align: center;
+    font-size: 18px;
 }
 footer
 {

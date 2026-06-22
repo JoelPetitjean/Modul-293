@@ -41,7 +41,7 @@
                 <label for="firstName">Name</label>
                 <!--Überschreibbarer Platzhalter in Textbox-->
                 <!--Maximale länge von 25(Wichtig für Datenbank)-->
-                <input type="text" id="firstName" name="firstName" placeholder="First name" maxlength="25" autocomplete=""><br>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" maxlength="25" autocomplete="name"><br>
                 <label for="familyName">Family Name</label>
                 <input type="text" id="familyName" name="familyName" placeholder="Family name" maxlength="25"><br>
                 <label>Age</label>
@@ -88,22 +88,26 @@
     <main> <!--Unter main wird der Hauptteil definiert-->
         <section class="car-Selection_Section"> <!--Section für Autoauswahl-->
             <h2>Car selection</h2>
+            <div class="line"></div>
             <table class="car-Selection_Table"> <!--Autoauswahl als Tabelle-->
                 <tr>
                     <td><button onclick="window.location.href = 'RUFCTR.html'">Not implemented</button></td>
                     <!--Wird zur jeweiligen Seite des Autos leiten-->
                     <td><button onclick="window.location.href = 'JaguarXJ220.html'">View </button></td>
                     <td><button onclick="window.location.href = 'AstonV600.html'">Not implemented </button></td>
+                    <td></td>
                 </tr>
                 <tr class="row_pictures">
                     <td>picture</td> <!--Platzhalter für kommende Bilder-->
                     <td>picture</td>
                     <td>picture</td>
+                    <td></td>
                 </tr>
                 <tr class="row_name">
                     <th>RUF CTR "Yellowbird"</th> <!--th für Überschrift in Tabelle-->
                     <th>Jaguar XJ220</th>
                     <th>Aston Martin Vantage V600 Le Mans</th>
+                    <th></th>
                 </tr>
                 <tr class="row_power">
                     <td>469hp - 552Nm</td> <!--td für normale Spalten-->
