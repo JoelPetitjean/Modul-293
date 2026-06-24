@@ -7,6 +7,7 @@ button
     font-size: 17px;
     color: darkslategray;
     background-color: transparent;
+    border-radius: 4px;
 }
 button:hover /*Pseudoselektor(Wenn Mauszeiger über a hovert)*/
 {
